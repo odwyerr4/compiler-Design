@@ -282,11 +282,12 @@ static void yy_fatal_error YY_PROTO(( yyconst char msg[] ));
 	*yy_cp = '\0'; \
 	yy_c_buf_p = yy_cp;
 
-#define YY_NUM_RULES 3
-#define YY_END_OF_BUFFER 4
-static yyconst short int yy_accept[9] =
+#define YY_NUM_RULES 5
+#define YY_END_OF_BUFFER 6
+static yyconst short int yy_accept[16] =
     {   0,
-        0,    0,    4,    3,    2,    1,    1,    0
+        0,    0,    6,    5,    5,    5,    3,    3,    0,    1,
+        4,    0,    2,    4,    0
     } ;
 
 static yyconst int yy_ec[256] =
@@ -294,9 +295,9 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    2,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    3,    1,    1,    1,    1,    1,    1,
+        1,    4,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    3,    3,    3,
-        3,    3,    3,    3,    3,    3,    3,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -304,7 +305,7 @@ static yyconst int yy_ec[256] =
 
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    5,    1,    6,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -321,29 +322,35 @@ static yyconst int yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst int yy_meta[4] =
+static yyconst int yy_meta[7] =
     {   0,
-        1,    1,    2
+        1,    2,    1,    3,    1,    1
     } ;
 
-static yyconst short int yy_base[10] =
+static yyconst short int yy_base[20] =
     {   0,
-        0,    0,    5,    6,    6,    0,    0,    6,    2
+        0,    0,   21,   22,   17,    0,   13,   22,   15,   14,
+        0,   10,   22,    0,   22,    6,   11,    9,   12
     } ;
 
-static yyconst short int yy_def[10] =
+static yyconst short int yy_def[20] =
     {   0,
-        8,    1,    8,    8,    8,    9,    9,    0,    8
+       15,    1,   15,   15,   16,   17,   18,   15,   16,   16,
+       19,   18,   15,   19,    0,   15,   15,   15,   15
     } ;
 
-static yyconst short int yy_nxt[10] =
+static yyconst short int yy_nxt[29] =
     {   0,
-        4,    5,    6,    7,    8,    3,    8,    8,    8
+        4,    4,    5,    6,    7,    8,    9,    9,    9,   12,
+       12,   12,   14,   11,   14,   13,   10,   10,   13,   10,
+       15,    3,   15,   15,   15,   15,   15,   15
     } ;
 
-static yyconst short int yy_chk[10] =
+static yyconst short int yy_chk[29] =
     {   0,
-        1,    1,    1,    9,    3,    8,    8,    8,    8
+        1,    1,    1,    1,    1,    1,   16,   16,   16,   18,
+       18,   18,   19,   17,   19,   12,   10,    9,    7,    5,
+        3,   15,   15,   15,   15,   15,   15,   15
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -357,12 +364,10 @@ static char *yy_last_accepting_cpos;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "even.l"
+#line 1 "comments.l"
 #define INITIAL 0
-#line 3 "even.l"
-int i = 0; 
-int even = 0;
-#line 366 "lex.yy.c"
+#line 2 "comments.l"
+#line 371 "lex.yy.c"
 
 /* Macros after this point can all be overridden by user definitions in
  * section 1.
@@ -513,10 +518,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
 
-#line 7 "even.l"
+#line 4 "comments.l"
 
 
-#line 520 "lex.yy.c"
+#line 525 "lex.yy.c"
 
 	if ( yy_init )
 		{
@@ -567,13 +572,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 9 )
+				if ( yy_current_state >= 16 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 6 );
+		while ( yy_base[yy_current_state] != 22 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -601,23 +606,30 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 9 "even.l"
-{i=atoi(yytext); 
-            if(i%2==0 )  
-               even++; 
-         } 
+#line 6 "comments.l"
+{printf("%s", yytext);}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 13 "even.l"
-{  }
+#line 7 "comments.l"
+{} //ignore comments in curly braces
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 15 "even.l"
+#line 8 "comments.l"
+
+	YY_BREAK
+case 4:
+YY_RULE_SETUP
+#line 9 "comments.l"
+{} //ignore line of comments starting with **
+	YY_BREAK
+case 5:
+YY_RULE_SETUP
+#line 11 "comments.l"
 ECHO;
 	YY_BREAK
-#line 621 "lex.yy.c"
+#line 633 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -909,7 +921,7 @@ static yy_state_type yy_get_previous_state()
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 9 )
+			if ( yy_current_state >= 16 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -944,11 +956,11 @@ yy_state_type yy_current_state;
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 9 )
+		if ( yy_current_state >= 16 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 8);
+	yy_is_jam = (yy_current_state == 15);
 
 	return yy_is_jam ? 0 : yy_current_state;
 	}
@@ -1503,14 +1515,12 @@ int main()
 	return 0;
 	}
 #endif
-#line 15 "even.l"
+#line 11 "comments.l"
+
 
 int yywrap(){}
 
-int main()
-{
-  yylex();
-  printf("%d\n", even);
-  return 0;
+int main(){
+    yylex();
+    return 0;
 }
-
