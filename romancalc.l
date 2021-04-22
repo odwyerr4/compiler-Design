@@ -2,7 +2,7 @@
 %option noyywrap
 
 %{
-# include "romcalc.tab.h"
+# include "romancalc.tab.h"
 void yyerror(char *s);
 %}
 
